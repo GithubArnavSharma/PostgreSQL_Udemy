@@ -1,6 +1,6 @@
 # PostgreSQL_Udemy
 
-Code from the Udemy "SQL & PostgreSQL for Beginners: Become an SQL Expert" course 
+Code from the Udemy "SQL & PostgreSQL for Beginners: Become an SQL Expert" course by Jon Avis
 
 Section 3: "SQL & PostgreSQL : Data Definition Language - Creating our Movie Database"
 
