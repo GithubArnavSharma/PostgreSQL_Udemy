@@ -7,9 +7,9 @@ SELECT * FROM examples;
 
 INSERT INTO examples (first_name, last_name, email, nationality, age)
 VALUES ('Emily', 'Watson', 'ewatson@gmail.com', 'USA', 29),
-	   ('Theo', 'Scott', 'tscott@gmail.com', 'AUS', 33),
-	   ('Emily', 'Smith', 'esmith@gmail.com', 'GBR', 29),
-	   ('Jim', 'Burr', 'jburr@gmail.com', 'USA', 54);
+       ('Theo', 'Scott', 'tscott@gmail.com', 'AUS', 33),
+       ('Emily', 'Smith', 'esmith@gmail.com', 'GBR', 29),
+       ('Jim', 'Burr', 'jburr@gmail.com', 'USA', 54);
 	   
 -- Update data from the examples data
 
