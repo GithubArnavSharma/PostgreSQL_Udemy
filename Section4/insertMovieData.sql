@@ -1,5 +1,5 @@
 INSERT INTO directors (first_name, last_name, date_of_birth, nationality) 
-VALUES  ('Tomas','Alfredson','1965-04-01','Swedish'),
+VALUES  	('Tomas','Alfredson','1965-04-01','Swedish'),
 		('Paul','Anderson','1970-06-26','American'),
 		('Wes','Anderson','1969-05-01','American'),
 		('Richard','Ayoade','1977-06-12','British'),
@@ -191,7 +191,7 @@ VALUES  ('Malin','Akerman','F','1978-05-12'),
 SELECT * FROM actors;
 
 INSERT INTO movies (movie_name, movie_length, movie_lang, release_date, age_certificate, director_id) 
-VALUES  ('A Clockwork Orange','112','English','1972-02-02','18','13'),
+VALUES  	('A Clockwork Orange','112','English','1972-02-02','18','13'),
 		('Apocalypse Now','168','English','1979-08-15','15','9'),
 		('Battle Royale ','111','Japanese','2001-01-04','18','10'),
 		('Blade Runner ','121','English','1982-06-25','15','27'),
@@ -248,7 +248,7 @@ VALUES  ('A Clockwork Orange','112','English','1972-02-02','18','13'),
 SELECT * FROM movies;
 
 INSERT INTO movie_revenues (revenue_id, movie_id, domestic_takings, international_takings) 
-VALUES  ('1','45','22.2','1.3'),
+VALUES  	('1','45','22.2','1.3'),
 		('2','13','199.4','201.2'),
 		('3','23','102.1',null),
 		('4','44','158.7',null),
@@ -305,7 +305,7 @@ VALUES  ('1','45','22.2','1.3'),
 SELECT * FROM movie_revenues;
 
 INSERT INTO movies_actors (actor_id, movie_id) 
-VALUES  ('1','52'),
+VALUES  	('1','52'),
 		('2','50'),
 		('3','23'),
 		('4','26'),
