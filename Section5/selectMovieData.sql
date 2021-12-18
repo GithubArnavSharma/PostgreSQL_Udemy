@@ -90,3 +90,60 @@ WHERE movie_length BETWEEN 90 AND 120;
 
 SELECT movie_name, movie_lang FROM movies
 WHERE movie_lang BETWEEN 'E' AND 'Portuguese';
+
+-- Ordering results returned from actors table
+
+SELECT * FROM actors;
+
+SELECT first_name, last_name, date_of_birth 
+FROM actors
+ORDER BY first_name;
+
+SELECT first_name, last_name, date_of_birth 
+FROM actors
+ORDER BY first_name DESC;
+
+SELECT actor_id, first_name, last_name, date_of_birth 
+FROM actors
+ORDER BY actor_id DESC;
+
+SELECT actor_id, first_name, last_name, date_of_birth 
+FROM actors
+WHERE gender = 'F'
+ORDER BY date_of_birth DESC;
+
+-- Limiting results from the movie revenue table
+
+SELECT * 
+FROM movie_revenues
+ORDER BY domestic_takings
+LIMIT 3;
+
+SELECT * 
+FROM movie_revenues
+ORDER BY revenue_id
+LIMIT 5 OFFSET 5;
+
+-- Using fetch on the movies table
+
+SELECT movie_id, movie_name
+FROM movies
+FETCH FIRST ROW ONLY;
+
+SELECT movie_id, movie_name
+FROM movies
+OFFSET 8 ROWS
+FETCH FIRST 10 ROW ONLY;
+
+-- Select distinct values from the movies table
+
+SELECT DISTINCT movie_lang
+FROM movies
+ORDER BY movie_lang;
+
+SELECT DISTINCT movie_lang, age_certificate
+FROM movies
+ORDER BY movie_lang;
+
+SELECT DISTINCT * FROM movies
+ORDER BY movie_lang;
