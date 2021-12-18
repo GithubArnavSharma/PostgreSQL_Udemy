@@ -137,3 +137,40 @@ ORDER BY movie_lang;
 
 SELECT DISTINCT * FROM movies
 ORDER BY movie_lang;
+
+-- Dealing with NULL values in the actors and movie revenues table
+
+SELECT * FROM actors
+WHERE date_of_birth IS NULL;
+
+SELECT * FROM actors
+WHERE date_of_birth IS NOT NULL;
+
+SELECT * FROM movie_revenues
+WHERE domestic_takings IS NOT NULL
+ORDER BY domestic_takings DESC;
+
+SELECT * FROM movie_revenues
+WHERE international_takings IS NULL;
+
+-- Setting a column name alias (only rename column in select)
+
+SELECT last_name AS surname FROM directors;
+
+SELECT * FROM directors;
+
+SELECT last_name AS surname FROM directors
+WHERE last_name LIKE 'A%'
+ORDER BY surname;
+
+-- Using concatenation for strings and columns
+
+SELECT 'concat' || 'together' AS new_string;
+
+SELECT 'concat' || ' ' || 'together' AS new_string;
+
+SELECT CONCAT(first_name, last_name) AS full_name FROM actors;
+
+SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM actors;
+
+SELECT CONCAT_WS(' ', first_name, last_name, date_of_birth) AS full_name FROM actors;
