@@ -8,4 +8,4 @@ Section 3: "SQL & PostgreSQL : Data Definition Language - Creating our Movie Dat
 
 Section 4: "SQL & PostgreSQL: Data Manipulation Language" 
 
-Section 5: "SQL & PostgreSQL : Retrieving Data from a Table - Select Queries"
+Section 5: "SQL & PostgreSQL: Retrieving Data from a Table - Select Queries"
