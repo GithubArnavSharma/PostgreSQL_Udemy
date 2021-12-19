@@ -36,3 +36,45 @@ SELECT AVG(movie_length) FROM movies;
 
 SELECT AVG(movie_length) FROM movies
 WHERE age_certificate = '18';
+
+-- Grouping data
+
+SELECT movie_lang, COUNT(movie_lang) FROM movies
+GROUP BY movie_lang;
+
+SELECT movie_lang, AVG(movie_length) FROM movies
+GROUP BY movie_lang;
+
+SELECT movie_lang, age_certificate, AVG(movie_length) FROM movies
+GROUP BY movie_lang, age_certificate;
+
+SELECT movie_lang, age_certificate, AVG(movie_length) FROM movies
+WHERE movie_length > 120
+GROUP BY movie_lang, age_certificate;
+
+SELECT movie_lang, MIN(movie_length), MAX(movie_length) FROM movies
+WHERE age_certificate = '15'
+GROUP BY movie_lang;
+
+-- Using the HAVING clause 
+
+SELECT movie_lang, COUNT(movie_lang) FROM movies
+GROUP BY movie_lang
+HAVING COUNT(movie_lang) > 1;
+
+SELECT movie_lang, COUNT(movie_lang) FROM movies
+WHERE movie_length > 120
+GROUP BY movie_lang
+HAVING COUNT(movie_lang) > 1;
+
+-- Using Matematical Operators
+
+SELECT 5 + 6 AS addition;
+SELECT 8 - 3 AS substract;
+SELECT 35 / 3 AS division;
+SELECT 35.0 / 3.0 AS division;
+SELECT 4 * 6 AS multiplication;
+
+SELECT 15 % 4 AS modulus;
+
+SELECT movie_id, (domestic_takings + international_takings) AS takings FROM movie_revenues;
