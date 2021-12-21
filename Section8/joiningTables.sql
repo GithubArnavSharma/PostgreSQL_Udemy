@@ -113,3 +113,19 @@ SELECT first_name FROM directors
 UNION ALL
 SELECT first_name FROM actors
 ORDER BY first_name;
+
+-- Using INTERSECT on tables
+
+SELECT first_name FROM directors
+WHERE nationality = 'American'
+INTERSECT
+SELECT first_name FROM actors
+ORDER BY first_name;
+
+-- Using EXCEPT on tables
+
+SELECT first_name FROM directors
+WHERE nationality = 'American'
+EXCEPT
+SELECT first_name FROM actors
+ORDER BY first_name;
