@@ -9,3 +9,9 @@ Section 3: "SQL & PostgreSQL : Data Definition Language - Creating our Movie Dat
 Section 4: "SQL & PostgreSQL: Data Manipulation Language" 
 
 Section 5: "SQL & PostgreSQL: Retrieving Data from a Table - Select Queries"
+
+Section 6: "SQL & PostgreSQL: Aggregate Functions and Grouping Data"
+
+Section 7: "Database Relationships" (No SQL)
+
+Section 8: "SQL & PostgreSQL: Joining Tables"
