@@ -73,3 +73,23 @@ SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
 FULL JOIN movies mo ON d.director_id = mo.director_id
 WHERE mo.movie_lang IN ('German', 'Korean')
 ORDER BY d.last_name;
+
+-- Joining more than two tables together
+
+SELECT d.first_name, d.last_name, mo.movie_name, mr.domestic_takings, mr.international_takings FROM directors d
+JOIN movies mo ON d.director_id = mo.director_id
+JOIN movie_revenues mr ON mo.movie_id = mr.movie_id;
+
+SELECT ac.first_name, ac.last_name, mo.movie_name FROM actors ac
+JOIN movies_actors ma ON ac.actor_id = ma.actor_id
+JOIN movies mo ON ma.movie_id = mo.movie_id
+WHERE mo.movie_lang = 'English'
+ORDER BY mo.movie_name;
+
+SELECT d.first_name, d.last_name, mo.movie_name, ac.first_name, ac.last_name,
+mr.domestic_takings, mr.international_takings 
+FROM directors d 
+JOIN movies mo ON d.director_id = mo.director_id
+JOIN movies_actors ma ON mo.movie_id = ma.movie_id
+JOIN actors ac ON ma.actor_id = ac.actor_id
+JOIN movie_revenues mr ON mo.movie_id = mr.movie_id;
