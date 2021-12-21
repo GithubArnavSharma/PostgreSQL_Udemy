@@ -93,3 +93,23 @@ JOIN movies mo ON d.director_id = mo.director_id
 JOIN movies_actors ma ON mo.movie_id = ma.movie_id
 JOIN actors ac ON ma.actor_id = ac.actor_id
 JOIN movie_revenues mr ON mo.movie_id = mr.movie_id;
+
+-- Using UNION on tables
+
+SELECT first_name, last_name FROM directors
+UNION
+SELECT first_name, last_name FROM actors;
+
+SELECT first_name, last_name, date_of_birth FROM directors
+WHERE nationality = 'American'
+UNION
+SELECT first_name, last_name, date_of_birth FROM actors
+WHERE gender = 'F'
+ORDER BY first_name;
+
+-- Using UNION ALL on tables
+
+SELECT first_name FROM directors
+UNION ALL
+SELECT first_name FROM actors
+ORDER BY first_name;
