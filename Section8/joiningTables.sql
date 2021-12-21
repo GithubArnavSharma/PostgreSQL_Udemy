@@ -36,3 +36,40 @@ SELECT mo.movie_name, mr.domestic_takings FROM movies mo
 JOIN movie_revenues mr USING (movie_id)
 WHERE mo.age_certificate IN ('12', '15', '18')
 ORDER BY mr.domestic_takings DESC;
+
+-- Using left join on tables
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
+LEFT JOIN movies mo ON d.director_id = mo.director_id;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM movies mo
+LEFT JOIN directors d ON d.director_id = mo.director_id;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
+LEFT JOIN movies mo ON d.director_id = mo.director_id
+WHERE d.nationality = 'British';
+
+-- Using right join on tables
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
+RIGHT JOIN movies mo ON d.director_id = mo.director_id;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM movies mo
+RIGHT JOIN directors d ON d.director_id = mo.director_id;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM movies mo
+RIGHT JOIN directors d ON d.director_id = mo.director_id
+WHERE mo.age_certificate = '18';
+
+-- Using full join on tables
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM movies mo
+FULL JOIN directors d ON d.director_id = mo.director_id;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
+FULL JOIN movies mo ON d.director_id = mo.director_id;
+
+SELECT d.director_id, d.first_name, d.last_name, mo.movie_name FROM directors d
+FULL JOIN movies mo ON d.director_id = mo.director_id
+WHERE mo.movie_lang IN ('German', 'Korean')
+ORDER BY d.last_name;
