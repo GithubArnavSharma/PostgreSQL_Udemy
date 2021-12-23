@@ -15,3 +15,7 @@ Section 6: "SQL & PostgreSQL: Aggregate Functions and Grouping Data"
 Section 7: "Database Relationships" (No SQL)
 
 Section 8: "SQL & PostgreSQL: Joining Tables"
+
+Section 9: "SQL & PostgreSQL: Subqueries"
+
+Section 10: "SQL & PostgreSQL: String Functions"
